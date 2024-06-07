@@ -16,7 +16,18 @@ fileGroups:
   target:
     - "/site/[!visualizer]"
 tasks:
-  copySchema:
+  copyComponentSchema:
+    command:
+      - cp
+      - -r
+      - ../../packages/component-schemas/schemas
+      - public/
+    platform: system
+    inputs:
+      - /packages/component-schemas/schemas/**/*.json
+    outputs:
+      - public/schemas
+  copyTokenTypeSchema:
     command:
       - cp
       - -r
@@ -33,7 +44,8 @@ tasks:
       - build
     platform: node
     deps:
-      - ~:copySchema
+      - ~:copyComponentSchema
+      - ~:copyTokenTypeSchema
     outputs:
       - "/site/"
   clean:

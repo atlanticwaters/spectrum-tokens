@@ -1,0 +1,26 @@
+{
+  "name": "spectrum-component-api-schemas",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adobe/spectrum-tokens.git"
+  },
+  "author": "Garth Braithwaite <garthdb@gmail.com> (https://garthdb.com/)",
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-tokens/issues"
+  },
+  "publishConfig": {
+    "provenance": true
+  },
+  "homepage": "https://github.com/adobe/spectrum-tokens/tree/main/packages/component-schemas#readme",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "ajv": "^8.12.0",
+    "ajv-formats": "^3.0.1",
+    "glob": "^10.3.12"
+  }
+}

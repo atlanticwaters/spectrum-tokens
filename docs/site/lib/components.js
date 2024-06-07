@@ -101,8 +101,16 @@ export async function getAllComponentSlugs() {
 }
 
 export async function getComponentData(slug) {
+  // not sure, if this should use the public/schemas folder, like getAllComponentSlugs()
   const schemaDir = path.resolve(
-    path.join(process.cwd(), "..", "..", "packages", "tokens", "schemas"),
+    path.join(
+      process.cwd(),
+      "..",
+      "..",
+      "packages",
+      "component-schemas",
+      "schemas",
+    ),
   );
   const file = await readJSON(
     path.join(schemaDir, "components", `${slug}.json`),

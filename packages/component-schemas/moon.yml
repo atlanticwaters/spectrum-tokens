@@ -18,26 +18,31 @@ tasks:
   build:
     deps:
       - ~:make
-      - ~:buildSchemas
-  buildSchemas:
     command:
       - cp
       - -R
       - schemas/
       - dist/v1
-    platform: node
+    platform: system
+    inputs:
+      - "@globs(schemas)"
+    outputs:
+      - dist/v1
+    local: true
   make:
     command:
       - mkdir
       - -p
       - dist/v1
-    platform: node
+    platform: system
+    local: true
   clean:
     command:
       - rm
       - -rf
       - dist
-    platform: node
+    platform: system
+    local: true
   test:
     command:
       - pnpm
@@ -45,8 +50,6 @@ tasks:
     inputs:
       - "@globs(schemas)"
       - "@globs(tests)"
-    deps:
-      - ~:buildSchemas
     platform: node
   test-watch:
     command:

@@ -35,7 +35,7 @@ export const schemaFileNames = await glob(
 );
 
 export const getFile = async (schemaFileName) =>
-  await readJson(resolve(__dirname, "src", tokenFileName));
+  await readJson(resolve(__dirname, "src", schemaFileName));
 
 export const getAllSchemas = async () => {
   return await Promise.all(schemaFileNames.map(getFileTokens)).then(

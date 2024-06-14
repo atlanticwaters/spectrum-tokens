@@ -1,5 +1,11 @@
 # @adobe/spectrum-component-api-schemas
 
+## 0.0.0-schema-20240614194147
+
+### Patch Changes
+
+- [#353](https://github.com/adobe/spectrum-tokens/pull/353) [`9805167`](https://github.com/adobe/spectrum-tokens/commit/980516791c0bef9e2f0bbeffe6515f103f3ad7a2) Thanks [@karstens](https://github.com/karstens)! - fixed some bugs
+
 ## 0.0.0-schema-20240613154750
 
 ### Patch Changes

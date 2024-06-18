@@ -1,5 +1,5 @@
 {
-  "name": "@adobe/spectrum-component-api-schemas",
+  "name": "@adobe/spectrum-component-schemas",
   "version": "0.0.0-schema-20240614194147",
   "description": "",
   "type": "module",

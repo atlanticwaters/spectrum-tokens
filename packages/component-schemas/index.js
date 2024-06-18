@@ -9,16 +9,21 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
 import { glob } from "glob";
-import { resolve, parse } from "path";
+import { resolve } from "path";
 import { readFile } from "fs/promises";
 import * as url from "url";
+
+export const getSlugFromDocumentationUrl = (documentationUrl) =>
+  documentationUrl
+    .split("/")
+    .filter((part) => part !== "")
+    .pop();
 
 export const readJson = async (fileName) =>
   JSON.parse(await readFile(fileName, "utf8"));
 
-const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
+export const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
 export const schemaFileNames = await glob(
   `${resolve(__dirname, "./schemas")}/**/*.json`,
@@ -27,18 +32,50 @@ export const schemaFileNames = await glob(
 export const getSchemaFile = async (schemaFileName) =>
   await readJson(resolve(__dirname, "src", schemaFileName));
 
+export const getAllSlugs = async () => {
+  return await Promise.all(schemaFileNames.map(getSchemaFile))
+    .then((schemaFileDataAr) => {
+      return schemaFileDataAr.reduce(
+        (slugs, schemaFileData) => [
+          ...slugs,
+          ...(Object.hasOwn(schemaFileData, "meta") &&
+          Object.hasOwn(schemaFileData.meta, "documentationUrl")
+            ? [
+                getSlugFromDocumentationUrl(
+                  schemaFileData.meta.documentationUrl,
+                ),
+              ]
+            : []),
+        ],
+        [],
+      );
+    })
+    .then((slugs) => slugs.sort());
+};
+
 export const getAllSchemas = async () => {
   return await Promise.all(
     schemaFileNames.map(async (schemaFileName) => {
-      return {
-        slug: parse(schemaFileName).name,
-        data: await getSchemaFile(schemaFileName),
-      };
+      const data = await getSchemaFile(schemaFileName);
+      if (
+        Object.hasOwn(data, "meta") &&
+        Object.hasOwn(data.meta, "documentationUrl")
+      ) {
+        return {
+          ...data,
+          ...{ slug: getSlugFromDocumentationUrl(data.meta.documentationUrl) },
+        };
+      } else return data;
     }),
-  ).then((schemaFileDataAr) => {
-    return schemaFileDataAr.reduce((schemaDataAcc, schemaFileData) => {
-      schemaDataAcc[schemaFileData.slug] = schemaFileData.data;
-      return schemaDataAcc;
-    }, {});
-  });
+  );
+};
+
+export const getSchemaBySlug = async (slug) => {
+  const schema = await getAllSchemas().then((schemas) =>
+    schemas.find((schema) => {
+      return Object.hasOwn(schema, "slug") && schema.slug === slug;
+    }),
+  );
+  delete schema.slug;
+  return schema;
 };

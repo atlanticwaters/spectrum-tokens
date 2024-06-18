@@ -15,34 +15,6 @@ fileGroups:
   tests:
     - "test/**/*"
 tasks:
-  build:
-    deps:
-      - ~:make
-    command:
-      - cp
-      - -R
-      - schemas/
-      - dist/v1
-    platform: system
-    inputs:
-      - "@globs(schemas)"
-    outputs:
-      - dist/v1
-    local: true
-  make:
-    command:
-      - mkdir
-      - -p
-      - dist/v1
-    platform: system
-    local: true
-  clean:
-    command:
-      - rm
-      - -rf
-      - dist
-    platform: system
-    local: true
   test:
     command:
       - pnpm

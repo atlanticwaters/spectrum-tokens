@@ -49,6 +49,10 @@
       "type": "string",
       "enum": ["manual", "automatic"],
       "default": "manual"
+    },
+    "children": {
+      "$ref": "https://opensource.adobe.com/spectrum-tokens/schemas/components/tab-item.json",
+      "description": "Children of the tabs should be of type tab-item."
     }
   }
 }

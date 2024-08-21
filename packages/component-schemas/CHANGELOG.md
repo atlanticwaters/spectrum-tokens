@@ -1,5 +1,11 @@
 # @adobe/spectrum-component-api-schemas
 
+## 0.0.0-schema-20240821152525
+
+### Patch Changes
+
+- [#353](https://github.com/adobe/spectrum-tokens/pull/353) [`dc2d6c6`](https://github.com/adobe/spectrum-tokens/commit/dc2d6c6e12c1ea4fdc0d891b3fd50ea0b1697dd7) Thanks [@karstens](https://github.com/karstens)! - Making adjustments to bring the schema more in line with what was on the spectrum website.
+
 ## 0.0.0-schema-20240620220450
 
 ### Minor Changes

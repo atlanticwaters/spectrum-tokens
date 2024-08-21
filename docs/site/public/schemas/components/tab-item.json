@@ -1,0 +1,34 @@
+{
+  "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/component.json",
+  "$id": "https://opensource.adobe.com/spectrum-tokens/schemas/components/tab-item.json",
+  "title": "Tab Item",
+  "description": "",
+  "meta": {
+    "category": "navigation",
+    "documentationUrl": "https://spectrum.adobe.com/page/tabs/"
+  },
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string",
+      "description": "If a label isn’t present, it must include an icon and becomes an icon-only tab item."
+    },
+    "icon": {
+      "$ref": "https://opensource.adobe.com/spectrum-tokens/schemas/types/workflow-icon.json",
+      "description": "Icon must be present if the label is not defined."
+    },
+    "isSelected": {
+      "type": "boolean",
+      "default": false
+    },
+    "isDisabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "state": {
+      "type": "string",
+      "enum": ["default", "hover", "down", "keyboard focus"],
+      "default": "default"
+    }
+  }
+}

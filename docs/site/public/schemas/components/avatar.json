@@ -15,7 +15,9 @@
       "default": 100
     },
     "image": {
-      "type": "string"
+      "type": "string",
+      "enum": ["text", "image"],
+      "default": "image"
     },
     "isDisabled": {
       "type": "boolean",

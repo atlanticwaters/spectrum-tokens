@@ -51,7 +51,7 @@ interface RawSpectrumTokenJson {
 }
 
 const SOURCE_PATH =
-  "https://raw.githubusercontent.com/adobe/spectrum-tokens/main/packages/tokens/";
+  "https://raw.githubusercontent.com/adobe/spectrum-tokens/s1-legacy/packages/tokens/";
 
 const MANIFEST_JSON = "manifest.json";
 
@@ -208,7 +208,7 @@ export class GraphDataSource {
       const rawValues: string[] = [];
       foundValues.forEach((foundValueItem) => {
         const valuePath = foundValueItem.path;
-        let foundValue = foundValueItem.value;
+        let foundValue = foundValueItem.value.toString();
         // is this found value a downstream adjacency?
         // if so, add it to the graph...
         if (

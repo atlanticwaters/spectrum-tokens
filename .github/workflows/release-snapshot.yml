@@ -49,4 +49,4 @@ jobs:
           npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
           pnpm changeset publish --tag $SNAPSHOT_TAG
           git push origin HEAD
-          git push origin --tags
+          git push --tags

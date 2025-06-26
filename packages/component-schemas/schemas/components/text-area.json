@@ -34,9 +34,6 @@
       "enum": ["text", "icon"],
       "default": "icon"
     },
-    "helpText": {
-      "type": "string"
-    },
     "isRequired": {
       "type": "boolean",
       "default": false
@@ -65,9 +62,8 @@
       "type": "number",
       "description": "If undefined, height is dynamic and grows with input text."
     },
-    "description": {
-      "type": "string",
-      "default": null
+    "helpText": {
+      "type": "string"
     },
     "errorMessage": {
       "type": "string",

@@ -87,6 +87,9 @@ export const getSchemaBySlug = async (slug) => {
       return Object.hasOwn(schema, "slug") && schema.slug === slug;
     }),
   );
+  if (schema === undefined) {
+    throw new Error(`Schema not found for slug: ${slug}`);
+  }
   delete schema.slug;
   return schema;
 };

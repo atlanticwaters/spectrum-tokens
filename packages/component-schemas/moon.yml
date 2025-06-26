@@ -22,11 +22,36 @@ tasks:
     inputs:
       - "@globs(schemas)"
       - "@globs(tests)"
-      - index.js
+      - "index.js"
+      - "ava.config.js"
     platform: node
   test-watch:
     command:
       - ava
       - --watch
+    local: true
+    platform: node
+  test-coverage:
+    command:
+      - c8
+      - ava
+    local: true
+    platform: node
+  test-schema-validation:
+    command:
+      - ava
+      - test/schema-validation.test.js
+    local: true
+    platform: node
+  test-integration:
+    command:
+      - ava
+      - test/integration.test.js
+    local: true
+    platform: node
+  test-performance:
+    command:
+      - ava
+      - test/performance.test.js
     local: true
     platform: node

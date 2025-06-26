@@ -34,9 +34,6 @@
       "enum": ["text", "icon"],
       "default": "icon"
     },
-    "helpText": {
-      "type": "string"
-    },
     "isRequired": {
       "type": "boolean",
       "default": false
@@ -58,13 +55,11 @@
       "type": "boolean",
       "default": false
     },
-    "description": {
-      "type": "string",
-      "default": null
+    "helpText": {
+      "type": "string"
     },
     "errorMessage": {
-      "type": "string",
-      "default": null
+      "type": "string"
     },
     "state": {
       "type": "string",

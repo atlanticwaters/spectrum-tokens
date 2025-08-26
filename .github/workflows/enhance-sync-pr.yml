@@ -58,6 +58,18 @@ jobs:
 
             console.log(`Updated PR title to: ${newTitle}`);
 
+      - name: Generate token diff report
+        id: token-diff
+        uses: ./.github/actions/generate-diff
+        with:
+          tool: diff-generator
+          base-ref: ${{ github.base_ref }}
+          head-ref: ${{ github.head_ref }}
+          repository: ${{ github.repository }}
+          format: markdown
+          output-file: /tmp/token-diff.md
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create changeset if needed
         if: steps.source-info.outputs.source-pr-title != ''
         run: |
@@ -72,6 +84,7 @@ jobs:
           SOURCE_AUTHOR_NAME="${{ steps.source-info.outputs.source-pr-author-name }}"
           SOURCE_AUTHOR_EMAIL="${{ steps.source-info.outputs.source-pr-author-email }}"
 
+          # Start building the changeset content
           cat > "$CHANGESET_FILE" << EOF
           ---
           "@adobe/spectrum-tokens": patch
@@ -82,6 +95,14 @@ jobs:
           Source: [spectrum-tokens-studio-data#${SOURCE_PR_NUMBER}](${SOURCE_PR_URL})
           Author: @${SOURCE_AUTHOR}
           EOF
+
+          # Add token diff if generated successfully
+          if [ "${{ steps.token-diff.outputs.diff-generated }}" = "true" ]; then
+            echo "" >> "$CHANGESET_FILE"
+            echo "## Token Changes" >> "$CHANGESET_FILE"
+            echo "" >> "$CHANGESET_FILE"
+            echo '${{ steps.token-diff.outputs.diff-content }}' >> "$CHANGESET_FILE"
+          fi
 
           # Commit the changeset with original author attribution
           git config --local user.email "$SOURCE_AUTHOR_EMAIL"

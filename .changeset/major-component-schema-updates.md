@@ -1,5 +1,5 @@
 ---
-"@adobe/spectrum-component-schemas": major
+"@adobe/spectrum-component-api-schemas": major
 ---
 
 feat(component-schemas): add 10 new components with breaking changes to existing schemas

@@ -15,7 +15,10 @@
     "labelPosition": {
       "type": "string",
       "default": "top",
-      "enum": ["top", "side"]
+      "enum": [
+        "top",
+        "side"
+      ]
     },
     "value": {
       "type": "number",
@@ -29,6 +32,11 @@
       "type": "number",
       "default": 100
     },
+    "isRange": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, the slider will allow selection of a range of values by displaying two handles."
+    },
     "step": {
       "type": "number",
       "default": 1
@@ -39,7 +47,10 @@
     },
     "progressionScale": {
       "type": "string",
-      "enum": ["linear", "log"],
+      "enum": [
+        "linear",
+        "log"
+      ],
       "default": "linear"
     },
     "width": {
@@ -67,7 +78,12 @@
     },
     "state": {
       "type": "string",
-      "enum": ["default", "hover", "down", "keyboard focus"],
+      "enum": [
+        "default",
+        "hover",
+        "down",
+        "keyboard focus"
+      ],
       "default": "default"
     }
   }

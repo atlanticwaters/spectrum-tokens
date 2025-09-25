@@ -11,7 +11,12 @@
   "properties": {
     "state": {
       "type": "string",
-      "enum": ["default", "hover", "down", "keyboard focus"],
+      "enum": [
+        "default",
+        "hover",
+        "down",
+        "keyboard focus"
+      ],
       "default": "default"
     },
     "isSelected": {
@@ -23,8 +28,8 @@
       "default": false
     },
     "label": {
-      "type": "boolean",
-      "default": true
+      "type": "string",
+      "description": "The text displayed next to a radio button."
     }
   }
 }

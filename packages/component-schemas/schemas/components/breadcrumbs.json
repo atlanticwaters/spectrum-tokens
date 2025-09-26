@@ -50,13 +50,13 @@
           }
         },
         "required": ["label"]
-        }
-      },
-      "separator": {
-        "type": "string",
-        "enum": ["chevron", "none"],
-        "default": "chevron",
-        "description": "The separator icon used between breadcrumb items."
+      }
+    },
+    "separator": {
+      "type": "string",
+      "enum": ["chevron", "none"],
+      "default": "chevron",
+      "description": "The separator icon used between breadcrumb items."
     },
     "isTruncated": {
       "type": "boolean",

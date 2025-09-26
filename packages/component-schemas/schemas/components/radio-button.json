@@ -11,12 +11,7 @@
   "properties": {
     "state": {
       "type": "string",
-      "enum": [
-        "default",
-        "hover",
-        "down",
-        "keyboard focus"
-      ],
+      "enum": ["default", "hover", "down", "keyboard focus"],
       "default": "default"
     },
     "isSelected": {

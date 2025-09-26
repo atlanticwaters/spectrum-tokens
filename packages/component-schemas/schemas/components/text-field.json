@@ -15,10 +15,7 @@
     "labelPosition": {
       "type": "string",
       "default": "top",
-      "enum": [
-        "top",
-        "side"
-      ]
+      "enum": ["top", "side"]
     },
     "hideLabel": {
       "type": "boolean",
@@ -33,20 +30,12 @@
     },
     "size": {
       "type": "string",
-      "enum": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
+      "enum": ["s", "m", "l", "xl"],
       "default": "m"
     },
     "necessityIndicator": {
       "type": "string",
-      "enum": [
-        "text",
-        "icon"
-      ],
+      "enum": ["text", "icon"],
       "default": "icon"
     },
     "isRequired": {

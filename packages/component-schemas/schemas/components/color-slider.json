@@ -15,10 +15,18 @@
     },
     "channel": {
       "type": "string",
-      "enum": ["hue", "saturation", "lightness", "red", "green", "blue", "alpha"],
+      "enum": [
+        "hue",
+        "saturation",
+        "lightness",
+        "red",
+        "green",
+        "blue",
+        "alpha"
+      ],
       "default": "hue",
       "description": "Which channel of the color this slider controls. Use 'alpha' for opacity."
-},
+    },
     "value": {
       "type": "number",
       "description": "Number (from minValue to maxValue)."

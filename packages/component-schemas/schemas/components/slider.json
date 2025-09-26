@@ -15,10 +15,7 @@
     "labelPosition": {
       "type": "string",
       "default": "top",
-      "enum": [
-        "top",
-        "side"
-      ]
+      "enum": ["top", "side"]
     },
     "value": {
       "type": "number",
@@ -47,10 +44,7 @@
     },
     "progressionScale": {
       "type": "string",
-      "enum": [
-        "linear",
-        "log"
-      ],
+      "enum": ["linear", "log"],
       "default": "linear"
     },
     "width": {
@@ -78,12 +72,7 @@
     },
     "state": {
       "type": "string",
-      "enum": [
-        "default",
-        "hover",
-        "down",
-        "keyboard focus"
-      ],
+      "enum": ["default", "hover", "down", "keyboard focus"],
       "default": "default"
     }
   }

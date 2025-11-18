@@ -1,0 +1,473 @@
+/**
+ * Design Tokens - CSS Variables
+ * Generated from: design-tokens.json
+ * Date: 2025-11-18T20:08:47.653Z
+ */
+
+:root {
+  --font.font-family.display: THD LgVar Beta;
+  --font.font-family.informational: THD SmVar Beta;
+  --font.font-weight.body.bold: Bold;
+  --font.font-weight.body.semibold: SemiBold;
+  --font.font-weight.body.medium: Medium;
+  --font.font-weight.body.regular: Regular;
+  --font.font-weight.body.light: Light;
+  --font.font-weight.heading.extrabold: ExtraBold;
+  --font.font-weight.heading.bold: Bold;
+  --font.font-weight.heading.semibold: SemiBold;
+  --font.font-weight.condensed.bold: 48;
+  --font.font-size.hero-1: 64px;
+  --font.font-size.hero-2: 56px;
+  --font.font-size.hero-3: 48px;
+  --font.font-size.hero-4: 40px;
+  --font.font-size.hero-5: 36px;
+  --font.font-size.h1: 32px;
+  --font.font-size.h2: 28px;
+  --font.font-size.h3: 24px;
+  --font.font-size.h4: 20px;
+  --font.font-size.h5: 18px;
+  --font.font-size.h6: 16px;
+  --font.font-size.body-xl: 20px;
+  --font.font-size.body-lg: 18px;
+  --font.font-size.body-md: 16px;
+  --font.font-size.body-sm: 14px;
+  --font.font-size.body-xs: 12px;
+  --font.font-weight.condensed.semibold: 37;
+  --font.font-weight.condensed.regular: 56;
+  --font.font-size.caption: 11px;
+  --font.letter-spacing.nlarge: -5%;
+  --font.letter-spacing.nsmall: -2%;
+  --font.letter-spacing.base: 0%;
+  --font.letter-spacing.psmall: 2%;
+  --font.letter-spacing.plarge: 5%;
+  --font.line-height.none: 100%;
+  --font.line-height.tight: 125%;
+  --font.line-height.base: 150%;
+  --neutrals.white: rgb(255, 255, 255);
+  --neutrals.black: rgb(0, 0, 0);
+  --neutrals.transparent: rgba(0, 0, 0, 0);
+  --transparent-white.transparent-white-025: rgba(255, 255, 255, 0.019999999552965164);
+  --transparent-black.transparent-black-025: rgba(0, 0, 0, 0.019999999552965164);
+  --transparent-black.transparent-black-050: rgba(0, 0, 0, 0.05000000074505806);
+  --transparent-black.transparent-black-075: rgba(0, 0, 0, 0.07000000029802322);
+  --transparent-white.transparent-white-050: rgba(255, 255, 255, 0.05000000074505806);
+  --transparent-white.transparent-white-075: rgba(255, 255, 255, 0.07000000029802322);
+  --greige.greige-025: rgb(251, 250, 249);
+  --brand.brand-025: rgb(255, 250, 246);
+  --brand.brand-050: rgb(254, 242, 233);
+  --brand.brand-100: rgb(254, 218, 195);
+  --brand.brand-200: rgb(251, 162, 104);
+  --brand.brand-300: rgb(249, 99, 2);
+  --brand.brand-400: rgb(233, 92, 2);
+  --brand.brand-500: rgb(202, 80, 2);
+  --brand.brand-600: rgb(179, 71, 1);
+  --brand.brand-700: rgb(149, 59, 1);
+  --brand.brand-800: rgb(120, 48, 1);
+  --brand.brand-900: rgb(64, 26, 1);
+  --brand.brand-950: rgb(24, 9, 0);
+  --greige.greige-050: rgb(248, 245, 242);
+  --greige.greige-100: rgb(229, 225, 222);
+  --greige.greige-200: rgb(186, 183, 180);
+  --greige.greige-300: rgb(151, 148, 146);
+  --greige.greige-400: rgb(139, 136, 135);
+  --greige.greige-500: rgb(120, 118, 117);
+  --greige.greige-600: rgb(106, 104, 103);
+  --greige.greige-700: rgb(88, 87, 86);
+  --greige.greige-800: rgb(71, 69, 69);
+  --greige.greige-900: rgb(37, 37, 36);
+  --greige.greige-950: rgb(13, 13, 13);
+  --moonlight.moonlight-025: rgb(251, 251, 253);
+  --moonlight.moonlight-050: rgb(243, 244, 248);
+  --moonlight.moonlight-100: rgb(223, 225, 235);
+  --moonlight.moonlight-200: rgb(176, 182, 208);
+  --moonlight.moonlight-300: rgb(139, 147, 185);
+  --moonlight.moonlight-400: rgb(126, 135, 177);
+  --moonlight.moonlight-500: rgb(105, 116, 165);
+  --moonlight.moonlight-600: rgb(90, 102, 155);
+  --moonlight.moonlight-700: rgb(73, 84, 137);
+  --moonlight.moonlight-800: rgb(58, 68, 109);
+  --moonlight.moonlight-900: rgb(30, 36, 58);
+  --moonlight.moonlight-950: rgb(11, 12, 20);
+  --bottle-green.bottle-green-025: rgb(250, 252, 251);
+  --lemon.lemon-025: rgb(254, 251, 237);
+  --lemon.lemon-050: rgb(253, 246, 210);
+  --lemon.lemon-100: rgb(249, 226, 112);
+  --lemon.lemon-200: rgb(207, 183, 58);
+  --lemon.lemon-300: rgb(165, 149, 71);
+  --lemon.lemon-400: rgb(151, 137, 72);
+  --lemon.lemon-500: rgb(129, 119, 71);
+  --lemon.lemon-600: rgb(113, 105, 69);
+  --lemon.lemon-700: rgb(92, 87, 63);
+  --lemon.lemon-800: rgb(74, 70, 55);
+  --lemon.lemon-900: rgb(38, 37, 33);
+  --lemon.lemon-950: rgb(13, 13, 13);
+  --cinnabar.cinnabar-025: rgb(254, 249, 249);
+  --chamoisee.chamoisee-025: rgb(252, 251, 251);
+  --chamoisee.chamoisee-050: rgb(247, 244, 242);
+  --chamoisee.chamoisee-100: rgb(232, 224, 219);
+  --chamoisee.chamoisee-200: rgb(199, 180, 168);
+  --chamoisee.chamoisee-300: rgb(172, 143, 124);
+  --chamoisee.chamoisee-400: rgb(163, 130, 110);
+  --chamoisee.chamoisee-500: rgb(144, 112, 91);
+  --chamoisee.chamoisee-600: rgb(128, 99, 81);
+  --chamoisee.chamoisee-700: rgb(107, 82, 67);
+  --chamoisee.chamoisee-800: rgb(85, 66, 54);
+  --chamoisee.chamoisee-900: rgb(45, 35, 28);
+  --chamoisee.chamoisee-950: rgb(16, 12, 10);
+  --cinnabar.cinnabar-050: rgb(253, 241, 240);
+  --cinnabar.cinnabar-100: rgb(251, 218, 215);
+  --cinnabar.cinnabar-200: rgb(245, 162, 155);
+  --cinnabar.cinnabar-300: rgb(240, 107, 97);
+  --cinnabar.cinnabar-400: rgb(237, 85, 73);
+  --cinnabar.cinnabar-500: rgb(223, 52, 39);
+  --cinnabar.cinnabar-600: rgb(198, 46, 35);
+  --cinnabar.cinnabar-700: rgb(165, 39, 29);
+  --cinnabar.cinnabar-800: rgb(134, 31, 23);
+  --cinnabar.cinnabar-900: rgb(73, 17, 13);
+  --cinnabar.cinnabar-950: rgb(28, 6, 5);
+  --bottle-green.bottle-green-050: rgb(240, 245, 243);
+  --bottle-green.bottle-green-100: rgb(216, 228, 222);
+  --bottle-green.bottle-green-200: rgb(160, 190, 174);
+  --bottle-green.bottle-green-300: rgb(115, 158, 136);
+  --bottle-green.bottle-green-400: rgb(99, 147, 123);
+  --bottle-green.bottle-green-500: rgb(74, 129, 101);
+  --bottle-green.bottle-green-600: rgb(57, 116, 86);
+  --bottle-green.bottle-green-700: rgb(34, 98, 66);
+  --bottle-green.bottle-green-800: rgb(13, 80, 46);
+  --bottle-green.bottle-green-900: rgb(0, 44, 18);
+  --bottle-green.bottle-green-950: rgb(0, 16, 6);
+  --transparent-white.transparent-white-100: rgba(255, 255, 255, 0.10000000149011612);
+  --transparent-white.transparent-white-200: rgba(255, 255, 255, 0.15000000596046448);
+  --transparent-white.transparent-white-300: rgba(255, 255, 255, 0.20000000298023224);
+  --transparent-white.transparent-white-400: rgba(255, 255, 255, 0.23999999463558197);
+  --transparent-white.transparent-white-500: rgba(255, 255, 255, 0.3199999928474426);
+  --transparent-white.transparent-white-600: rgba(255, 255, 255, 0.5);
+  --transparent-white.transparent-white-700: rgba(255, 255, 255, 0.6000000238418579);
+  --transparent-white.transparent-white-800: rgba(255, 255, 255, 0.699999988079071);
+  --transparent-white.transparent-white-900: rgba(255, 255, 255, 0.8799999952316284);
+  --transparent-white.transparent-white-950: rgba(255, 255, 255, 0.9599999785423279);
+  --transparent-black.transparent-black-100: rgba(0, 0, 0, 0.10000000149011612);
+  --transparent-black.transparent-black-200: rgba(0, 0, 0, 0.15000000596046448);
+  --transparent-black.transparent-black-300: rgba(0, 0, 0, 0.20000000298023224);
+  --transparent-black.transparent-black-400: rgba(0, 0, 0, 0.23999999463558197);
+  --transparent-black.transparent-black-500: rgba(0, 0, 0, 0.3199999928474426);
+  --transparent-black.transparent-black-600: rgba(0, 0, 0, 0.5);
+  --transparent-black.transparent-black-700: rgba(0, 0, 0, 0.6000000238418579);
+  --transparent-black.transparent-black-800: rgba(0, 0, 0, 0.699999988079071);
+  --transparent-black.transparent-black-900: rgba(0, 0, 0, 0.8799999952316284);
+  --transparent-black.transparent-black-950: rgba(0, 0, 0, 0.9599999785423279);
+  --shadow-50: rgba(0, 0, 0, 0.05000000074505806);
+  --shadow-100: rgba(0, 0, 0, 0.10000000149011612);
+  --shadow-200: rgba(0, 0, 0, 0.11999999731779099);
+  --shadow-300: rgba(0, 0, 0, 0.18000000715255737);
+  --shadow-500: rgba(0, 0, 0, 0.23999999463558197);
+  --spacing-0: 0; /* 0 */
+  --spacing-1px: 1; /* 1 */
+  --spacing-2px: 2px; /* 2 */
+  --spacing-1: 4px; /* 4 */
+  --spacing-6px: 6px;
+  --spacing-2: 8px; /* 8 */
+  --spacing-3: 12px; /* 12 */
+  --spacing-4: 16px; /* 16 */
+  --spacing-5: 20px; /* 20 */
+  --spacing-6: 24px; /* 24 */
+  --spacing-7: 28px; /* 28 */
+  --spacing-8: 32px; /* 32 */
+  --spacing-9: 36px; /* 36 */
+  --spacing-10: 40px; /* 40 */
+  --spacing-11: 44px; /* 44 */
+  --spacing-12: 48px; /* 48 */
+  --spacing-13: 52px; /* 52 */
+  --spacing-14: 56px; /* 56 */
+  --spacing-15: 60px; /* 60 */
+  --spacing-16: 64px; /* 64 */
+  --spacing-17: 68px; /* 68 */
+  --spacing-18: 72px; /* 72 */
+  --spacing-19: 76px; /* 76 */
+  --spacing-20: 80px; /* 80 */
+  --spacing-21: 84px; /* 84 */
+  --spacing-22: 88px; /* 88 */
+  --spacing-23: 92px; /* 92 */
+  --spacing-24: 96px; /* 96 */
+  --spacing-25: 100px; /* 100 */
+  --spacing-26: 104px; /* 104 */
+  --spacing-27: 108px; /* 108 */
+  --spacing-28: 112px; /* 112 */
+  --spacing-29: 116px; /* 116 */
+  --spacing-30: 120px; /* 120 */
+  --spacing-31: 124px; /* 124 */
+  --spacing-32: 128px; /* 128 */
+  --spacing-33: 132px; /* 132 */
+  --spacing-34: 136px; /* 136 */
+  --spacing-35: 140px; /* 140 */
+  --spacing-36: 144px;
+  --radius-0: 0;
+  --radius-1: 1;
+  --radius-2: 2px;
+  --radius-3: 3px;
+  --radius-4: 4px;
+  --radius-5: 6px;
+  --radius-6: 8px;
+  --radius-7: 12px;
+  --radius-8: 16px;
+  --radius-9: 20px;
+  --radius-10: 24px;
+  --radius-11: 28px;
+  --radius-12: 32px;
+  --radius-13: 36px;
+  --radius-14: 40px;
+  --radius-15: 44px;
+  --radius-16: 48px;
+  --radius-17: 52px;
+  --radius-18: 56px;
+  --radius-19: 60px;
+  --radius-20: 64px;
+  --radius-999: 9999px;
+  --border-0: 0;
+  --border-1: 1;
+  --border-2: 2px;
+  --border-3: 3px;
+  --border-4: 4px;
+  --border-5: 6px;
+  --border-6: 8px;
+  --border-7: 12px;
+  --border-8: 16px;
+  --border-9: 20px;
+  --border-10: 24px;
+  --border-11: 28px;
+  --border-12: 32px;
+  --colors.accents.blue: var(--brand-brand-300);
+  --background.surface-color.greige: var(--greige-greige-050);
+  --background.container-color.white: var(--neutrals-white);
+  --background.container-color.transparent-05: var(--transparent-black-transparent-black-050);
+  --background.container-color.transparent-10: var(--transparent-black-transparent-black-100);
+  --background.container-color.transparent-20: var(--transparent-black-transparent-black-300);
+  --background.container-color.inverse: var(--greige-greige-900);
+  --background.container-color.brand: var(--brand-brand-300);
+  --background.container-color.brand-accent: var(--brand-brand-050);
+  --background.overlay-color.page-scrim: rgba(0, 0, 0, 0.10000000149011612);
+  --background.button-color.ghost-filled.default: var(--neutrals-transparent);
+  --background.button-color.ghost-filled.pressed: var(--transparent-black-transparent-black-100);
+  --background.button-color.ghost-filled.inactive: var(--greige-greige-200);
+  --background.button-color.white-filled.default: var(--neutrals-white);
+  --background.button-color.white-filled.inactive: var(--greige-greige-100);
+  --background.button-color.gradient-filled.default: rgb(255, 255, 255);
+  --background.button-color.gradient-filled.inactive: var(--transparent-black-transparent-black-050);
+  --background.button-color.orange-filled.default: var(--brand-brand-300);
+  --background.button-color.orange-filled.inactive: var(--greige-greige-100);
+  --background.button-color.transparent-10.default: var(--transparent-black-transparent-black-100);
+  --background.button-color.transparent-10.pressed: var(--transparent-black-transparent-black-200);
+  --background.button-color.transparent-10.active: var(--greige-greige-950);
+  --background.button-color.transparent-10.inactive: var(--greige-greige-200);
+  --background.button-color.transparent-05.default: var(--transparent-black-transparent-black-050);
+  --background.button-color.transparent-05.pressed: var(--transparent-black-transparent-black-100);
+  --background.button-color.transparent-05.active: var(--greige-greige-950);
+  --background.button-color.transparent-05.inactive: var(--greige-greige-200);
+  --background.selector-color.outline.default: var(--neutrals-white);
+  --background.selector-color.outline.pressed: var(--greige-greige-100);
+  --background.selector-color.outline.selected: var(--greige-greige-900);
+  --background.selector-color.outline.selected-accent: var(--brand-brand-400);
+  --background.selector-color.outline.inactive: var(--greige-greige-200);
+  --background.selector-color.filled.default: var(--transparent-black-transparent-black-050);
+  --background.selector-color.filled.pressed: var(--transparent-black-transparent-black-100);
+  --background.selector-color.filled.selected: var(--greige-greige-900);
+  --background.selector-color.filled.inactive: var(--greige-greige-100);
+  --background.input-color.white-outlined.default: var(--neutrals-white);
+  --background.input-color.white-outlined.pressed: var(--greige-greige-050);
+  --background.input-color.white-outlined.inactive: var(--greige-greige-100);
+  --background.input-color.transparent-10.default: var(--transparent-black-transparent-black-100);
+  --background.input-color.brand-filled.default: var(--brand-brand-400);
+  --background.feedback-color.informational: var(--moonlight-moonlight-050);
+  --background.feedback-color.warning: var(--lemon-lemon-050);
+  --background.feedback-color.success: var(--bottle-green-bottle-green-050);
+  --background.feedback-color.error: var(--cinnabar-cinnabar-050);
+  --background.surface-color.inverse: var(--greige-greige-950);
+  --background.accent-color.blue: var(--moonlight-moonlight-500);
+  --background.accent-color.yellow: var(--lemon-lemon-100);
+  --background.accent-color.red: var(--cinnabar-cinnabar-500);
+  --background.accent-color.green: var(--bottle-green-bottle-green-500);
+  --background.accent-color.brown: rgb(255, 255, 255);
+  --border.on-container.default: var(--greige-greige-200);
+  --border.on-container.pressed: var(--greige-greige-900);
+  --border.on-container.active: var(--greige-greige-900);
+  --border.on-container.inactive: var(--greige-greige-100);
+  --border.on-container.inverse: var(--transparent-white-transparent-white-100);
+  --border.radius.none: var(--Radius 0);
+  --border.radius.xs: var(--Radius 1);
+  --border.radius.sm: var(--Radius 2);
+  --border.width.none: var(--Border-0);
+  --border.radius.md: var(--Radius 3);
+  --border.radius.lg: var(--Radius 5);
+  --border.radius.xl: var(--Radius 6);
+  --border.radius.2xl: var(--Radius 7);
+  --border.width.xs: var(--Border-1);
+  --border.width.sm: var(--Border-2);
+  --border.width.md: var(--Border-4);
+  --border.width.lg: var(--Border-6);
+  --border.width.xl: var(--Border-7);
+  --border.width.2xl: var(--Border-8);
+  --border.button-color.default: var(--greige-greige-500);
+  --border.button-color.pressed: var(--greige-greige-700);
+  --border.button-color.inactive: var(--greige-greige-300);
+  --text.on-surface-color.primary: var(--greige-greige-900);
+  --text.on-surface-color.secondary: var(--greige-greige-800);
+  --text.on-surface-color.tertiary: var(--greige-greige-600);
+  --text.on-surface-color.quatrenary: var(--greige-greige-500);
+  --text.on-surface-color.inverse: var(--greige-greige-025);
+  --text.on-surface-color.inactive: var(--greige-greige-300);
+  --text.on-surface-color.accent: var(--brand-brand-300);
+  --text.on-surface-color.accent-2: var(--brand-brand-500);
+  --text.on-surface-color.success: var(--bottle-green-bottle-green-500);
+  --text.on-surface-color.warning: var(--lemon-lemon-500);
+  --text.on-surface-color.error: var(--cinnabar-cinnabar-500);
+  --text.on-surface-color.informational: var(--moonlight-moonlight-500);
+  --text.on-container-color.primary: var(--greige-greige-900);
+  --text.on-container-color.secondary: var(--greige-greige-800);
+  --text.on-container-color.tertiary: var(--greige-greige-600);
+  --text.on-container-color.quatrenary: var(--greige-greige-500);
+  --text.on-container-color.inverse: var(--greige-greige-025);
+  --text.on-container-color.inactive: var(--greige-greige-300);
+  --text.on-container-color.accent: var(--brand-brand-300);
+  --text.on-container-color.accent-2: var(--brand-brand-500);
+  --text.on-container-color.success: var(--bottle-green-bottle-green-500);
+  --text.on-container-color.warning: var(--lemon-lemon-500);
+  --text.on-container-color.error: var(--cinnabar-cinnabar-500);
+  --text.on-container-color.informational: var(--moonlight-moonlight-500);
+  --text.button-color.orange-filled.default: var(--neutrals-white);
+  --text.button-color.orange-filled.inactive: var(--greige-greige-300);
+  --text.button-color.orange-outline.default: var(--brand-brand-400);
+  --text.button-color.orange-outline.inactive: var(--greige-greige-300);
+  --text.button-color.transparent-05-filled.default: var(--greige-greige-900);
+  --text.button-color.transparent-05-filled.inactive: var(--greige-greige-300);
+  --text.button-color.transparent-10-filled.default: var(--greige-greige-900);
+  --text.button-color.transparent-10-filled.inactive: var(--greige-greige-300);
+  --text.button-color.gradient-filled.default: var(--neutrals-white);
+  --text.button-color.gradient-filled.inactive: var(--transparent-white-transparent-white-800);
+  --text.button-color.white-filled.default: var(--greige-greige-900);
+  --text.button-color.white-filled.inactive: var(--greige-greige-300);
+  --text.button-color.ghost-filled.default: var(--greige-greige-900);
+  --text.button-color.ghost-filled.inactive: var(--greige-greige-300);
+  --text.selector-color.default: var(--greige-greige-800);
+  --text.input-color.brand-filled.default: var(--neutrals-white);
+  --text.input-color.white-outlined.default: var(--greige-greige-700);
+  --text.input-color.transparent-10.default: var(--greige-greige-700);
+  --text.selector-color.active: var(--greige-greige-900);
+  --text.input-color.transparent-10.active: var(--greige-greige-900);
+  --text.selector-color.selected: var(--greige-greige-025);
+  --text.input-color.transparent-10.inactive: var(--greige-greige-300);
+  --text.selector-color.inactive: var(--greige-greige-300);
+  --icon.input-color.default: var(--greige-greige-700);
+  --icon.on-surface-color.primary: var(--greige-greige-900);
+  --icon.input-color.active: var(--greige-greige-900);
+  --icon.input-color.inactive: var(--greige-greige-300);
+  --icon.on-surface-color.secondary: var(--greige-greige-800);
+  --icon.on-surface-color.tertiary: var(--greige-greige-600);
+  --icon.on-surface-color.inverse: var(--neutrals-white);
+  --icon.on-surface-color.inactive: var(--greige-greige-300);
+  --icon.on-surface-color.accent: var(--brand-brand-300);
+  --icon.on-surface-color.accent-2: var(--brand-brand-500);
+  --icon.on-surface-color.success: var(--bottle-green-bottle-green-500);
+  --icon.on-surface-color.warning: var(--lemon-lemon-500);
+  --icon.on-surface-color.error: var(--cinnabar-cinnabar-500);
+  --icon.on-surface-color.informational: var(--moonlight-moonlight-500);
+  --icon.on-container-color.primary: var(--greige-greige-900);
+  --icon.on-container-color.secondary: var(--greige-greige-800);
+  --icon.on-container-color.tertiary: var(--greige-greige-600);
+  --icon.on-container-color.inverse: var(--neutrals-white);
+  --icon.on-container-color.inactive: var(--greige-greige-300);
+  --icon.on-container-color.accent: var(--brand-brand-300);
+  --icon.on-container-color.accent-2: var(--brand-brand-500);
+  --icon.on-container-color.success: var(--bottle-green-bottle-green-500);
+  --icon.on-container-color.warning: var(--lemon-lemon-500);
+  --icon.on-container-color.error: var(--cinnabar-cinnabar-500);
+  --icon.on-container-color.informational: var(--moonlight-moonlight-500);
+  --icon.action-color.orange-filled.default: var(--neutrals-white);
+  --icon.action-color.orange-filled.inactive: var(--greige-greige-300);
+  --icon.action-color.orange-outline.default: var(--brand-brand-300);
+  --icon.action-color.orange-outline.inactive: var(--greige-greige-300);
+  --icon.action-color.transparent-05-filled.default: var(--greige-greige-900);
+  --icon.action-color.transparent-05-filled.inactive: var(--greige-greige-300);
+  --icon.action-color.transparent-10-filled.default: var(--greige-greige-900);
+  --icon.action-color.transparent-10-filled.inactive: var(--greige-greige-300);
+  --icon.action-color.gradient-filled.default: var(--neutrals-white);
+  --icon.action-color.gradient-filled.inactive: var(--transparent-white-transparent-white-800);
+  --icon.action-color.white-filled.default: var(--greige-greige-900);
+  --icon.action-color.white-filled.inactive: var(--greige-greige-300);
+  --icon.action-color.ghost-filled.default: var(--greige-greige-900);
+  --icon.action-color.ghost-filled.inactive: var(--greige-greige-300);
+  --icon.selector-color.outline.default: var(--greige-greige-800);
+  --icon.selector-color.outline.active: var(--greige-greige-900);
+  --icon.selector-color.outline.selected: var(--greige-greige-025);
+  --icon.selector-color.outline.inactive: var(--greige-greige-300);
+  --elevation.lowest: var(--shadow-50);
+  --elevation.low: var(--shadow-100);
+  --elevation.med: var(--shadow-200);
+  --elevation.high: var(--shadow-300);
+  --elevation.highest: var(--shadow-500);
+  --elevation.position.x-1: 1;
+  --elevation.blur-radius.blur-1: 4px;
+  --elevation.blur-radius.blur-2: 8px;
+  --elevation.blur-radius.blur-3: 12px;
+  --elevation.blur-radius.blur-4: 16px;
+  --elevation.blur-radius.blur-5: 24px;
+  --elevation.position.x-2: 3px;
+  --elevation.position.x-3: 4px;
+  --elevation.position.x-4: 8px;
+  --elevation.position.x-5: 16px;
+  --elevation.position.y-1: 1;
+  --elevation.position.y-2: 3px;
+  --elevation.position.y-3: 4px;
+  --elevation.position.y-4: 8px;
+  --elevation.position.y-5: 16px;
+  --elevation.position.y--1: 1px;
+  --elevation.position.y--2: 3px;
+  --elevation.position.y--3: 4px;
+  --elevation.position.y--4: 8px;
+  --elevation.position.y--5: 16px;
+  --border.button-color.focus: var(--greige-greige-900);
+  --border.button-color.accent: var(--brand-brand-300);
+  --border.button-color.accent-2: var(--greige-greige-900);
+  --border.button-color.orange-outline.default: var(--brand-brand-300);
+  --border.button-color.orange-outline.inactive: var(--greige-greige-300);
+  --border.input-color.default: var(--greige-greige-200);
+  --border.input-color.pressed: var(--greige-greige-300);
+  --border.input-color.inactive: var(--greige-greige-100);
+  --border.input-color.focus: var(--greige-greige-900);
+  --border.input-color.active: var(--greige-greige-900);
+  --border.input-color.accent: var(--brand-brand-300);
+  --border.input-color.accent-2: var(--brand-brand-500);
+  --border.input-color.success: var(--bottle-green-bottle-green-400);
+  --border.input-color.warning: var(--lemon-lemon-200);
+  --border.input-color.error: var(--cinnabar-cinnabar-500);
+  --border.selector-color.outline.default: var(--greige-greige-300);
+  --border.selector-color.outline.pressed: var(--greige-greige-700);
+  --border.selector-color.outline.selected: var(--greige-greige-900);
+  --border.selector-color.outline.selected-accent: var(--brand-brand-400);
+  --border.selector-color.outline.inactive: var(--greige-greige-200);
+  --border.selector-color.filled.default: var(--neutrals-transparent);
+  --border.selector-color.filled.pressed: var(--greige-greige-300);
+  --border.selector-color.filled.selected: var(--greige-greige-900);
+  --border.selector-color.filled.inactive: var(--greige-greige-200);
+  --border.radius.3xl: var(--Radius 8);
+  --border.radius.full: var(--Radius 999);
+  --text.selector-color.outline.default: var(--greige-greige-800);
+  --text.selector-color.outline.active: var(--greige-greige-900);
+  --text.selector-color.outline.selected: var(--greige-greige-025);
+  --text.selector-color.outline.inactive: var(--greige-greige-300);
+  --text.selector-color.filled.default: var(--greige-greige-800);
+  --icon.selector-color.filled.default: var(--greige-greige-800);
+  --icon.selector-color.filled.active: var(--greige-greige-900);
+  --text.selector-color.filled.active: var(--greige-greige-900);
+  --icon.selector-color.filled.selected: var(--greige-greige-025);
+  --text.selector-color.filled.selected: var(--greige-greige-025);
+  --text.selector-color.filled.inactive: var(--greige-greige-300);
+  --icon.selector-color.filled.inactive: var(--greige-greige-300);
+  --background.selector-color.filled.transparent: var(--neutrals-transparent);
+  --background.selector-color.filled.switch-handle.default: var(--greige-greige-100);
+  --background.selector-color.filled.switch-handle.selected: var(--greige-greige-100);
+  --paddingx: 0;
+  --paddingy: 0;
+  --gap: 0;
+  --minheight: 0;
+  --radius: 0;
+}

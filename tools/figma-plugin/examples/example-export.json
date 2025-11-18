@@ -1,0 +1,63 @@
+{
+  "primary-color": {
+    "$type": "color",
+    "$value": "#0265DC",
+    "$description": "Primary brand color for interactive elements",
+    "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/token-types/color.json",
+    "uuid": "123e4567-e89b-12d3-a456-426614174000",
+    "component": "button"
+  },
+  "secondary-color": {
+    "$type": "color",
+    "$value": "#6E6E6E",
+    "$description": "Secondary color for less prominent UI elements",
+    "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/token-types/color.json",
+    "uuid": "234e5678-e89b-12d3-a456-426614174001",
+    "component": "button"
+  },
+  "button-padding": {
+    "$type": "dimension",
+    "$value": "8",
+    "$description": "Horizontal padding for buttons",
+    "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/token-types/dimension.json",
+    "uuid": "345e6789-e89b-12d3-a456-426614174002",
+    "component": "button"
+  },
+  "button-height": {
+    "$type": "dimension",
+    "$value": "32",
+    "$description": "Height of standard button",
+    "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/token-types/dimension.json",
+    "uuid": "456e789a-e89b-12d3-a456-426614174003",
+    "component": "button"
+  },
+  "disabled-opacity": {
+    "$type": "opacity",
+    "$value": "0.4",
+    "$description": "Opacity for disabled interactive elements",
+    "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/token-types/opacity.json",
+    "uuid": "567e89ab-e89b-12d3-a456-426614174004"
+  },
+  "hover-scale": {
+    "$type": "multiplier",
+    "$value": "1.05",
+    "$description": "Scale multiplier for hover states",
+    "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/token-types/multiplier.json",
+    "uuid": "678e9abc-e89b-12d3-a456-426614174005"
+  },
+  "button-background-color": {
+    "$type": "alias",
+    "$value": "{primary-color}",
+    "$description": "Background color for primary buttons",
+    "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/token-types/alias.json",
+    "uuid": "789eabcd-e89b-12d3-a456-426614174006",
+    "component": "button"
+  },
+  "font-family-base": {
+    "$type": "fontFamily",
+    "$value": "Adobe Clean",
+    "$description": "Primary font family for UI",
+    "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/token-types/font-family.json",
+    "uuid": "89aebcde-e89b-12d3-a456-426614174007"
+  }
+}

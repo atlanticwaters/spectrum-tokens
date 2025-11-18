@@ -1,16 +1,16 @@
 {
   "stats": {
-    "total": 222,
+    "total": 225,
     "byType": {
       "legacy": 84,
-      "stable": 53,
+      "stable": 56,
       "beta": 61,
       "snapshot": 24
     },
-    "snapshotFeatures": 10,
+    "snapshotFeatures": 11,
     "dateRange": {
       "earliest": "2022-03-11",
-      "latest": "2025-08-27"
+      "latest": "2025-09-26"
     }
   },
   "timeline": [
@@ -1066,13 +1066,7 @@
       "minor": 5,
       "patch": 0,
       "prerelease": "beta.0",
-      "changeScope": {
-        "total": 0,
-        "added": 0,
-        "updated": 0,
-        "deleted": 0,
-        "score": 1
-      }
+      "changeScope": null
     },
     {
       "date": "2023-04-20",
@@ -1083,13 +1077,7 @@
       "major": 12,
       "minor": 5,
       "patch": 0,
-      "changeScope": {
-        "total": 0,
-        "added": 0,
-        "updated": 0,
-        "deleted": 0,
-        "score": 1
-      }
+      "changeScope": null
     },
     {
       "date": "2023-04-20",
@@ -1100,13 +1088,7 @@
       "major": 12,
       "minor": 6,
       "patch": 0,
-      "changeScope": {
-        "total": 0,
-        "added": 0,
-        "updated": 0,
-        "deleted": 0,
-        "score": 1
-      }
+      "changeScope": null
     },
     {
       "date": "2023-05-02",
@@ -1118,13 +1100,7 @@
       "minor": 5,
       "patch": 0,
       "prerelease": "beta.1",
-      "changeScope": {
-        "total": 0,
-        "added": 0,
-        "updated": 0,
-        "deleted": 0,
-        "score": 1
-      }
+      "changeScope": null
     },
     {
       "date": "2023-05-02",
@@ -1135,13 +1111,7 @@
       "major": 12,
       "minor": 7,
       "patch": 0,
-      "changeScope": {
-        "total": 0,
-        "added": 0,
-        "updated": 0,
-        "deleted": 0,
-        "score": 1
-      }
+      "changeScope": null
     },
     {
       "date": "2023-05-03",
@@ -1164,13 +1134,7 @@
       "major": 12,
       "minor": 8,
       "patch": 0,
-      "changeScope": {
-        "total": 0,
-        "added": 0,
-        "updated": 0,
-        "deleted": 0,
-        "score": 1
-      }
+      "changeScope": null
     },
     {
       "date": "2023-05-25",
@@ -1181,13 +1145,19 @@
       "major": 12,
       "minor": 9,
       "patch": 0,
-      "changeScope": {
-        "total": 0,
-        "added": 0,
-        "updated": 0,
-        "deleted": 0,
-        "score": 1
-      }
+      "changeScope": null
+    },
+    {
+      "date": "2023-05-30",
+      "type": "snapshot",
+      "version": "0.0.0",
+      "tag": "@adobe/spectrum-tokens@0.0.0-in-field-button-20230530211053",
+      "feature": "in-field-button",
+      "major": 0,
+      "minor": 0,
+      "patch": 0,
+      "prerelease": null,
+      "changeScope": null
     },
     {
       "date": "2023-05-31",
@@ -1210,13 +1180,7 @@
       "major": 12,
       "minor": 9,
       "patch": 1,
-      "changeScope": {
-        "total": 0,
-        "added": 0,
-        "updated": 0,
-        "deleted": 0,
-        "score": 1
-      }
+      "changeScope": null
     },
     {
       "date": "2023-06-08",
@@ -1432,6 +1396,23 @@
       "changeScope": null
     },
     {
+      "date": "2023-08-18",
+      "type": "stable",
+      "version": "12.17.0",
+      "tag": "@adobe/spectrum-tokens@12.17.0",
+      "feature": null,
+      "major": 12,
+      "minor": 17,
+      "patch": 0,
+      "changeScope": {
+        "total": 0,
+        "added": 0,
+        "updated": 0,
+        "deleted": 0,
+        "score": 1
+      }
+    },
+    {
       "date": "2023-08-23",
       "type": "stable",
       "version": "12.18.0",
@@ -1557,13 +1538,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.0",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2023-09-19",
@@ -1575,13 +1550,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.1",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2023-09-21",
@@ -1622,13 +1591,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.2",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2023-09-28",
@@ -1640,13 +1603,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.3",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2023-10-04",
@@ -1692,13 +1649,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.4",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2023-11-07",
@@ -1761,13 +1712,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.5",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2023-12-05",
@@ -1813,13 +1758,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.6",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-01-04",
@@ -1831,13 +1770,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.7",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-01-04",
@@ -1849,13 +1782,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.8",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-01-10",
@@ -1867,13 +1794,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.9",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-01-19",
@@ -1885,13 +1806,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.10",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-01-25",
@@ -1903,13 +1818,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.11",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-01-29",
@@ -1921,13 +1830,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.12",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-01-31",
@@ -1939,13 +1842,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.13",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-02-01",
@@ -1974,13 +1871,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.14",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-02-21",
@@ -1992,13 +1883,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.15",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-02-21",
@@ -2010,13 +1895,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.16",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-02-27",
@@ -2028,13 +1907,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.17",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-02-29",
@@ -2046,13 +1919,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.18",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-03-07",
@@ -2064,13 +1931,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.19",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-03-13",
@@ -2082,13 +1943,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.20",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-03-14",
@@ -2100,13 +1955,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.21",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-03-21",
@@ -2118,13 +1967,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.22",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-03-25",
@@ -2153,13 +1996,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.23",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-04-03",
@@ -2171,13 +2008,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.24",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-04-11",
@@ -2189,13 +2020,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.25",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-04-11",
@@ -2207,13 +2032,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.26",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-04-11",
@@ -2225,13 +2044,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.27",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-04-14",
@@ -2243,13 +2056,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.28",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-04-18",
@@ -2261,13 +2068,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.29",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-04-18",
@@ -2279,24 +2080,6 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.30",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
-    },
-    {
-      "date": "2024-04-22",
-      "type": "snapshot",
-      "version": "0.0.0",
-      "tag": "@adobe/spectrum-tokens@0.0.0-s2-foundations-20240422210530",
-      "feature": "s2-foundations",
-      "major": 0,
-      "minor": 0,
-      "patch": 0,
-      "prerelease": null,
       "changeScope": null
     },
     {
@@ -2338,13 +2121,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.31",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-04-26",
@@ -2356,13 +2133,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.32",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-04-26",
@@ -2374,13 +2145,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.33",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-05-01",
@@ -2392,13 +2157,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.34",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-05-03",
@@ -2422,13 +2181,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.35",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-05-31",
@@ -2440,13 +2193,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.36",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-06-03",
@@ -2487,13 +2234,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.37",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-06-24",
@@ -2505,13 +2246,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.38",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-06-28",
@@ -2535,13 +2270,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.39",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-07-09",
@@ -2553,13 +2282,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.40",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-07-25",
@@ -2571,13 +2294,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.41",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-07-25",
@@ -2589,13 +2306,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.42",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-07-25",
@@ -2607,13 +2318,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.43",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-08-07",
@@ -2625,13 +2330,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.44",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-08-07",
@@ -2643,13 +2342,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.45",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-08-12",
@@ -2661,13 +2354,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.46",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-08-29",
@@ -2708,13 +2395,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.47",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-10-03",
@@ -2726,13 +2407,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.48",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-10-04",
@@ -2744,13 +2419,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.49",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-10-08",
@@ -2762,13 +2431,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.50",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-10-21",
@@ -2792,13 +2455,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.51",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-10-28",
@@ -2810,13 +2467,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.52",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-10-31",
@@ -2828,13 +2479,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.53",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-11-21",
@@ -2858,13 +2503,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.54",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-12-19",
@@ -2876,13 +2515,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.55",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2024-12-20",
@@ -2894,13 +2527,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.56",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2025-02-07",
@@ -2912,13 +2539,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.57",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2025-02-11",
@@ -2947,13 +2568,7 @@
       "minor": 0,
       "patch": 0,
       "prerelease": "beta.58",
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2025-03-04",
@@ -2976,13 +2591,7 @@
       "major": 13,
       "minor": 0,
       "patch": 0,
-      "changeScope": {
-        "total": 2257,
-        "added": 665,
-        "updated": 1592,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2025-03-19",
@@ -3005,13 +2614,7 @@
       "major": 13,
       "minor": 1,
       "patch": 0,
-      "changeScope": {
-        "total": 64,
-        "added": 61,
-        "updated": 0,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2025-04-03",
@@ -3022,13 +2625,7 @@
       "major": 13,
       "minor": 2,
       "patch": 0,
-      "changeScope": {
-        "total": 174,
-        "added": 0,
-        "updated": 174,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2025-04-10",
@@ -3039,13 +2636,7 @@
       "major": 13,
       "minor": 3,
       "patch": 0,
-      "changeScope": {
-        "total": 1,
-        "added": 1,
-        "updated": 0,
-        "deleted": 0,
-        "score": 2
-      }
+      "changeScope": null
     },
     {
       "date": "2025-04-29",
@@ -3056,13 +2647,7 @@
       "major": 13,
       "minor": 4,
       "patch": 0,
-      "changeScope": {
-        "total": 18,
-        "added": 18,
-        "updated": 0,
-        "deleted": 0,
-        "score": 4
-      }
+      "changeScope": null
     },
     {
       "date": "2025-05-06",
@@ -3073,13 +2658,7 @@
       "major": 13,
       "minor": 5,
       "patch": 0,
-      "changeScope": {
-        "total": 18,
-        "added": 18,
-        "updated": 0,
-        "deleted": 0,
-        "score": 4
-      }
+      "changeScope": null
     },
     {
       "date": "2025-05-12",
@@ -3090,13 +2669,7 @@
       "major": 13,
       "minor": 6,
       "patch": 0,
-      "changeScope": {
-        "total": 3,
-        "added": 3,
-        "updated": 0,
-        "deleted": 0,
-        "score": 2
-      }
+      "changeScope": null
     },
     {
       "date": "2025-05-14",
@@ -3107,13 +2680,7 @@
       "major": 13,
       "minor": 7,
       "patch": 0,
-      "changeScope": {
-        "total": 0,
-        "added": 0,
-        "updated": 0,
-        "deleted": 0,
-        "score": 1
-      }
+      "changeScope": null
     },
     {
       "date": "2025-05-19",
@@ -3124,13 +2691,7 @@
       "major": 13,
       "minor": 8,
       "patch": 0,
-      "changeScope": {
-        "total": 22,
-        "added": 22,
-        "updated": 0,
-        "deleted": 0,
-        "score": 4
-      }
+      "changeScope": null
     },
     {
       "date": "2025-05-19",
@@ -3141,13 +2702,7 @@
       "major": 13,
       "minor": 9,
       "patch": 0,
-      "changeScope": {
-        "total": 28,
-        "added": 28,
-        "updated": 0,
-        "deleted": 0,
-        "score": 4
-      }
+      "changeScope": null
     },
     {
       "date": "2025-05-21",
@@ -3182,13 +2737,7 @@
       "major": 13,
       "minor": 10,
       "patch": 0,
-      "changeScope": {
-        "total": 20,
-        "added": 20,
-        "updated": 0,
-        "deleted": 0,
-        "score": 4
-      }
+      "changeScope": null
     },
     {
       "date": "2025-06-18",
@@ -3199,13 +2748,7 @@
       "major": 13,
       "minor": 10,
       "patch": 1,
-      "changeScope": {
-        "total": 2,
-        "added": 0,
-        "updated": 2,
-        "deleted": 0,
-        "score": 2
-      }
+      "changeScope": null
     },
     {
       "date": "2025-07-08",
@@ -3216,13 +2759,7 @@
       "major": 13,
       "minor": 11,
       "patch": 0,
-      "changeScope": {
-        "total": 22,
-        "added": 22,
-        "updated": 0,
-        "deleted": 0,
-        "score": 4
-      }
+      "changeScope": null
     },
     {
       "date": "2025-07-09",
@@ -3233,13 +2770,7 @@
       "major": 13,
       "minor": 12,
       "patch": 0,
-      "changeScope": {
-        "total": 4,
-        "added": 0,
-        "updated": 4,
-        "deleted": 0,
-        "score": 2
-      }
+      "changeScope": null
     },
     {
       "date": "2025-08-07",
@@ -3250,13 +2781,7 @@
       "major": 13,
       "minor": 13,
       "patch": 0,
-      "changeScope": {
-        "total": 4,
-        "added": 1,
-        "updated": 0,
-        "deleted": 0,
-        "score": 2
-      }
+      "changeScope": null
     },
     {
       "date": "2025-08-26",
@@ -3267,13 +2792,7 @@
       "major": 13,
       "minor": 14,
       "patch": 0,
-      "changeScope": {
-        "total": 0,
-        "added": 0,
-        "updated": 0,
-        "deleted": 0,
-        "score": 1
-      }
+      "changeScope": null
     },
     {
       "date": "2025-08-27",
@@ -3284,13 +2803,7 @@
       "major": 13,
       "minor": 14,
       "patch": 1,
-      "changeScope": {
-        "total": 33,
-        "added": 33,
-        "updated": 0,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
     },
     {
       "date": "2025-08-27",
@@ -3301,13 +2814,29 @@
       "major": 13,
       "minor": 15,
       "patch": 0,
-      "changeScope": {
-        "total": 43,
-        "added": 43,
-        "updated": 0,
-        "deleted": 0,
-        "score": 5
-      }
+      "changeScope": null
+    },
+    {
+      "date": "2025-08-29",
+      "type": "stable",
+      "version": "13.15.1",
+      "tag": "@adobe/spectrum-tokens@13.15.1",
+      "feature": null,
+      "major": 13,
+      "minor": 15,
+      "patch": 1,
+      "changeScope": null
+    },
+    {
+      "date": "2025-09-26",
+      "type": "stable",
+      "version": "13.16.0",
+      "tag": "@adobe/spectrum-tokens@13.16.0",
+      "feature": null,
+      "major": 13,
+      "minor": 16,
+      "patch": 0,
+      "changeScope": null
     }
   ],
   "snapshotFeatures": [
@@ -3319,6 +2848,17 @@
           "tag": "@adobe/spectrum-tokens@0.0.0-tabs-20230503165321",
           "date": "2023-05-03",
           "timestamp": "20230503165321"
+        }
+      ]
+    },
+    {
+      "feature": "in-field-button",
+      "count": 1,
+      "releases": [
+        {
+          "tag": "@adobe/spectrum-tokens@0.0.0-in-field-button-20230530211053",
+          "date": "2023-05-30",
+          "timestamp": "20230530211053"
         }
       ]
     },
@@ -3409,13 +2949,8 @@
     },
     {
       "feature": "s2-foundations",
-      "count": 7,
+      "count": 6,
       "releases": [
-        {
-          "tag": "@adobe/spectrum-tokens@0.0.0-s2-foundations-20240422210530",
-          "date": "2024-04-22",
-          "timestamp": "20240422210530"
-        },
         {
           "tag": "@adobe/spectrum-tokens@0.0.0-s2-foundations-20240422210545",
           "date": "2024-04-22",

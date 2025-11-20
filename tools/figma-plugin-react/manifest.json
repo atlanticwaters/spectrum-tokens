@@ -1,0 +1,14 @@
+{
+  "name": "Spectrum Token Manager (Beta)",
+  "id": "spectrum-token-manager-react",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "editorType": ["figma"],
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  },
+  "documentAccess": "dynamic-page",
+  "capabilities": [],
+  "permissions": ["currentuser"]
+}

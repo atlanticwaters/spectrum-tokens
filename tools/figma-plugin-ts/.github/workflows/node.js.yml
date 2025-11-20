@@ -1,0 +1,146 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on: [pull_request]
+
+env:
+  TOKEN_FLOW_APP_URL: ${{ secrets.TOKEN_FLOW_APP_URL }}
+  LICENSE_API_URL: ${{ secrets.LICENSE_API_URL }}
+
+jobs:
+  # Install dependencies and store artifact
+  package:
+    name: Create Package
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          cache: yarn
+          cache-dependency-path: "**/yarn.lock"
+      - name: Install dependencies
+        run: yarn  --frozen-lockfile  --immutable
+
+      # 5: Build package
+      - name: Build Package
+        run: npm run build
+      # 6: Store artifact
+      - name: Store Artifact
+        id: "store_artifact"
+        uses: actions/upload-artifact@v4
+        with:
+          name: package
+          path: |
+            packages/tokens-studio-for-figma/dist
+            packages/tokens-studio-for-figma/manifest.json
+
+      # 7: Post link to artifact
+      - name: Find artifact comment
+        uses: peter-evans/find-comment@v3
+        id: find_artifact_comment
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: The artifact was successfully created
+      - name: Create or update artifact comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ steps.find_artifact_comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ⤵️ 📦 ✨ The artifact was successfully created! Want to test it? [Download it here](${{steps.store_artifact.outputs.artifact-url}}) 👀 🎁
+          edit-mode: replace
+  # Install dependencies and run test command
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          cache: yarn
+          cache-dependency-path: "**/yarn.lock"
+      - name: Install dependencies
+        run: yarn  --frozen-lockfile  --immutable
+      - name: Run test command
+        run: npm run test
+  coverage:
+    name: Test coverage
+    continue-on-error: true
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          cache: yarn
+          cache-dependency-path: "**/yarn.lock"
+      - name: Install dependencies
+        run: yarn  --frozen-lockfile  --immutable
+      - name: Run test coverage report
+        id: testCoverage
+        uses: anuraag016/Jest-Coverage-Diff@master
+        with:
+          fullCoverageDiff: false
+          runCommand: "cd packages/tokens-studio-for-figma && npm run test:coverage:ci && cd ../.. && mv packages/tokens-studio-for-figma/coverage-summary.json coverage-summary.json"
+          afterSwitchCommand: yarn
+          useSameComment: true
+          delta: 1
+  cypress-run:
+    name: Cypress
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          cache: yarn
+          cache-dependency-path: "**/yarn.lock"
+      - name: Install dependencies
+        run: yarn  --frozen-lockfile  --immutable
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./packages/tokens-studio-for-figma
+          build: npm run build:cy
+          start: npm run serve
+  performance:
+    name: Performance
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          cache: yarn
+          cache-dependency-path: "**/yarn.lock"
+      - name: Install dependencies
+        run: yarn  --frozen-lockfile  --immutable
+      - name: Run benchmark
+        working-directory: packages/tokens-studio-for-figma
+        run: npm run benchmark:build && npm run benchmark:run
+  sonarqube:
+    name: SonarQube
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v6
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

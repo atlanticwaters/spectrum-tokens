@@ -147,7 +147,8 @@ export class TokenConverter {
         // Create DTCG token
         if (
           this.options.settings.format === "dtcg" ||
-          this.options.settings.format === "both"
+          this.options.settings.format === "both" ||
+          this.options.settings.format === "style-dictionary"
         ) {
           const dtcgToken = this.createDTCGToken(
             variable,

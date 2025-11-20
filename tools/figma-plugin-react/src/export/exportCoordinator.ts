@@ -24,6 +24,7 @@ import { convertTokens } from "../mapping/tokenConverter";
 import {
   generateDTCGFile,
   generateSpectrumFile,
+  generateStyleDictionaryFile,
   generateReadme,
   generateManifest,
   formatFileSize,
@@ -172,6 +173,27 @@ export class ExportCoordinator {
         this.reportProgress({
           stage: "generating",
           message: "Generated Spectrum tokens file",
+          current: 2,
+          total: 4,
+          percentage: 70,
+        });
+      }
+
+      // Generate Style Dictionary file if requested
+      if (settings.format === "style-dictionary") {
+        // Use platform from settings, default to web if not specified
+        const platform = settings.styleDictionaryPlatform || 'web';
+        const styleDictionaryFile = generateStyleDictionaryFile(
+          conversionResult.dtcgTokens,
+          settings,
+          undefined,
+          platform
+        );
+        files.push(styleDictionaryFile);
+
+        this.reportProgress({
+          stage: "generating",
+          message: `Generated Style Dictionary tokens file (${platform})`,
           current: 2,
           total: 4,
           percentage: 70,

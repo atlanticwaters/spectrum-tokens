@@ -162,7 +162,7 @@ export interface SpectrumTokenValue {
 // ============================================================================
 
 export interface ExportSettings {
-  format: "dtcg" | "spectrum" | "both";
+  format: "dtcg" | "spectrum" | "both" | "style-dictionary";
   structure: "nested" | "flat";
   fileOrganization: "single" | "byCollection" | "byComponent";
   includePrivate: boolean;
@@ -172,6 +172,7 @@ export interface ExportSettings {
   modeHandling: "color-set" | "scale-set" | "groups" | "auto";
   includeMetadata: boolean;
   generateUUIDs: "deterministic" | "random";
+  styleDictionaryPlatform?: "web" | "ios" | "android" | "compose";
 }
 
 export interface CollectionSelection {
@@ -338,6 +339,7 @@ export const DEFAULT_EXPORT_SETTINGS: ExportSettings = {
   modeHandling: "auto",
   includeMetadata: true,
   generateUUIDs: "deterministic",
+  styleDictionaryPlatform: "web",
 };
 
 export const SUPPORTED_TOKEN_TYPES: TokenType[] = [

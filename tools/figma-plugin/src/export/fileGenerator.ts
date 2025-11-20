@@ -20,11 +20,12 @@ import type {
   SpectrumToken,
   ExportSettings,
 } from "../shared/types";
+import { transformToStyleDictionary } from "./styleDictionaryTransformer";
 
 export interface ExportFile {
   filename: string;
   content: string;
-  format: "dtcg" | "spectrum";
+  format: "dtcg" | "spectrum" | "style-dictionary";
   size: number;
 }
 
@@ -75,6 +76,38 @@ export function generateSpectrumFile(
 }
 
 /**
+ * Generate Style Dictionary format JSON file
+ * Transforms DTCG tokens to Style Dictionary-compatible format
+ */
+export function generateStyleDictionaryFile(
+  tokens: Record<string, DesignToken | Record<string, unknown>>,
+  settings: ExportSettings,
+  collectionName?: string,
+  platform?: "ios" | "android" | "web" | "compose",
+): ExportFile {
+  const platformSuffix = platform ? `-${platform}` : "";
+  const filename = collectionName
+    ? `${sanitizeFilename(collectionName)}-style-dictionary${platformSuffix}.json`
+    : `style-dictionary${platformSuffix}.json`;
+
+  // Transform DTCG tokens to Style Dictionary format
+  const styleDictionaryTokens = transformToStyleDictionary(tokens, {
+    platform,
+    includeTransforms: true,
+  });
+
+  // Format JSON with 2-space indentation
+  const content = JSON.stringify(styleDictionaryTokens, null, 2);
+
+  return {
+    filename,
+    content,
+    format: "style-dictionary",
+    size: content.length,
+  };
+}
+
+/**
  * Generate README file for exported tokens
  */
 export function generateReadme(stats: {
@@ -100,12 +133,13 @@ This directory contains design tokens exported from Figma using the Spectrum Tok
 
 - \`*-dtcg.json\` - W3C Design Tokens Community Group format
 - \`*-spectrum.json\` - Adobe Spectrum format
+- \`*-style-dictionary.json\` - Style Dictionary format with custom transforms
 
 ### Usage
 
 These tokens can be used with:
 - Adobe Spectrum visualizers
-- Style Dictionary
+- Style Dictionary (internal tooling)
 - Design system tools
 - Custom token processors
 
@@ -123,6 +157,15 @@ Spectrum tokens include:
 - \`uuid\` - Unique identifier for tracking
 - \`value\` - Token value
 - \`component\` - Associated component (if applicable)
+
+### Style Dictionary Format
+
+Style Dictionary tokens are transformed for use with internal tooling:
+- Compatible with Style Dictionary build system
+- Includes \`type\`, \`value\`, and \`path\` properties
+- Supports custom transforms for iOS, Android, Compose, and Web platforms
+- Token paths are preserved for hierarchical organization
+- Original values maintained in \`original.value\` for reference
 
 ## Next Steps
 

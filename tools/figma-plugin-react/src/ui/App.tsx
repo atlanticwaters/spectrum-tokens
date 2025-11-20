@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import type { PluginMessage, PluginResponse } from '../shared/types';
+import type { PluginMessage, PluginResponse, ExportSettings as ExportSettingsType } from '../shared/types';
 import { DEFAULT_EXPORT_SETTINGS } from '../shared/types';
 import { useAppDispatch, useAppSelector } from './store/hooks';
 import { setLoading, setError } from './store/slices/uiSlice';
@@ -13,6 +13,7 @@ import { NodeInspector } from './components/nodes/NodeInspector';
 import { ToastContainer } from './components/feedback/ToastContainer';
 import { LoadingOverlay } from './components/feedback/LoadingOverlay';
 import { HistoryButtons } from './components/toolbar/HistoryButtons';
+import { ExportSettings } from './components/export/ExportSettings';
 import { useKeyboardShortcuts } from './hooks/useKeyboardShortcuts';
 import { useHistory } from './hooks/useHistory';
 import { initializeStorageProvider, pullTokens, pushTokens } from './operations/syncOperations';
@@ -29,6 +30,7 @@ const App: React.FC = () => {
   const [showFindReplace, setShowFindReplace] = useState(false);
   const [tokenEditorMode, setTokenEditorMode] = useState<'create' | 'edit'>('create');
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
+  const [exportSettings, setExportSettings] = useState<ExportSettingsType>(DEFAULT_EXPORT_SETTINGS);
 
   // History operations
   const { handleUndo, handleRedo } = useHistory();
@@ -169,12 +171,12 @@ const App: React.FC = () => {
   const handleExportTokens = () => {
     dispatch(setLoading(true));
 
-    // Send export message to plugin with all collections
+    // Send export message to plugin with all collections and current settings
     sendMessageToPlugin({
       type: 'export-tokens',
       payload: {
         selections: collections,
-        settings: DEFAULT_EXPORT_SETTINGS,
+        settings: exportSettings,
       },
     });
   };
@@ -205,6 +207,11 @@ const App: React.FC = () => {
       <div style={{ marginBottom: '16px', borderBottom: '1px solid #e0e0e0', paddingBottom: '16px' }}>
         <StorageSelector onConfigureClick={handleConfigureClick} />
         <SyncPanel onPullClick={handlePullClick} onPushClick={handlePushClick} />
+      </div>
+
+      {/* Export Settings */}
+      <div style={{ marginBottom: '16px', borderBottom: '1px solid #e0e0e0', paddingBottom: '16px' }}>
+        <ExportSettings settings={exportSettings} onChange={setExportSettings} />
       </div>
 
       {/* Token Operations */}

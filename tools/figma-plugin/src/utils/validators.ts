@@ -446,7 +446,7 @@ export function validateExportSettings(
   const warnings: ValidationWarning[] = [];
 
   // Validate format
-  const validFormats = ["dtcg", "spectrum", "both"];
+  const validFormats = ["dtcg", "spectrum", "both", "style-dictionary"];
   if (!validFormats.includes(settings.format)) {
     errors.push({
       code: "INVALID_FORMAT",

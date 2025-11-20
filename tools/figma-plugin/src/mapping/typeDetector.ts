@@ -33,6 +33,15 @@ export interface TypeDetectionResult {
  * Keyword patterns for type detection
  */
 const TYPE_PATTERNS = {
+  // Border radius patterns (checked before general dimension)
+  borderRadius: [
+    "radius",
+    "corner-radius",
+    "border-radius",
+    "rounded",
+    "corner",
+  ],
+
   // Dimension patterns
   dimension: [
     "size",
@@ -42,7 +51,6 @@ const TYPE_PATTERNS = {
     "padding",
     "margin",
     "gap",
-    "radius",
     "border",
     "stroke",
     "offset",
@@ -135,6 +143,27 @@ function detectFloatType(
   const nameLower = variable.name.toLowerCase();
   const description = variable.description.toLowerCase();
 
+  // Check for border radius first (highest priority for radius detection)
+  // 1. Check Figma scope for CORNER_RADIUS
+  if (variable.scopes.includes("CORNER_RADIUS")) {
+    return {
+      type: "dimension",
+      confidence: "high",
+      reason: "Figma CORNER_RADIUS scope detected",
+      spectrumSchema: "borderRadius",
+    };
+  }
+
+  // 2. Check for radius keywords in name or description
+  if (hasKeywords([nameLower, description], TYPE_PATTERNS.borderRadius)) {
+    return {
+      type: "dimension",
+      confidence: "high",
+      reason: "Border radius keywords detected",
+      spectrumSchema: "borderRadius",
+    };
+  }
+
   // Check for opacity (highest priority for values 0-1)
   if (value >= 0 && value <= 1) {
     if (hasKeywords([nameLower, description], TYPE_PATTERNS.opacity)) {
@@ -207,16 +236,6 @@ function detectFloatType(
     }
   }
 
-  // Check for dimension patterns
-  if (hasKeywords([nameLower, description], TYPE_PATTERNS.dimension)) {
-    return {
-      type: "dimension",
-      confidence: "high",
-      reason: "Dimension keywords detected",
-      spectrumSchema: "dimension",
-    };
-  }
-
   // Check for font size patterns
   if (hasKeywords([nameLower, description], TYPE_PATTERNS.fontSize)) {
     return {
@@ -224,6 +243,16 @@ function detectFloatType(
       confidence: "high",
       reason: "Font size keywords detected",
       spectrumSchema: "font-size",
+    };
+  }
+
+  // Check for dimension patterns
+  if (hasKeywords([nameLower, description], TYPE_PATTERNS.dimension)) {
+    return {
+      type: "dimension",
+      confidence: "high",
+      reason: "Dimension keywords detected",
+      spectrumSchema: "dimension",
     };
   }
 

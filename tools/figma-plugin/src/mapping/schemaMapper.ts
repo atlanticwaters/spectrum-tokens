@@ -35,6 +35,8 @@ export function getSpectrumSchema(
       return SPECTRUM_SCHEMAS.multiplier;
     case "string":
       return SPECTRUM_SCHEMAS.alias;
+    case "borderRadius":
+      return SPECTRUM_SCHEMAS.borderRadius;
     default:
       return SPECTRUM_SCHEMAS.color; // Safe fallback
   }

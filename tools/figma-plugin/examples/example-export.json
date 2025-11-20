@@ -59,5 +59,32 @@
     "$description": "Primary font family for UI",
     "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/token-types/font-family.json",
     "uuid": "89aebcde-e89b-12d3-a456-426614174007"
+  },
+  "corner-radius-small": {
+    "$type": "dimension",
+    "$value": "4",
+    "$description": "Small corner radius for UI elements",
+    "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/token-types/dimension.json",
+    "uuid": "9aebcdef-e89b-12d3-a456-426614174008",
+    "$extensions": {
+      "com.figma": {
+        "scopes": ["CORNER_RADIUS"],
+        "detectionReason": "Figma CORNER_RADIUS scope detected"
+      }
+    }
+  },
+  "button-border-radius": {
+    "$type": "dimension",
+    "$value": "8",
+    "$description": "Border radius for buttons",
+    "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/token-types/dimension.json",
+    "uuid": "aebcdefg-e89b-12d3-a456-426614174009",
+    "component": "button",
+    "$extensions": {
+      "com.figma": {
+        "scopes": ["ALL_SCOPES"],
+        "detectionReason": "Border radius keywords detected"
+      }
+    }
   }
 }

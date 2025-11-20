@@ -359,6 +359,7 @@ export const SPECTRUM_SCHEMAS = {
   fontFamily: `${SCHEMA_BASE_URL}/font-family.json`,
   fontWeight: `${SCHEMA_BASE_URL}/font-weight.json`,
   fontSize: `${SCHEMA_BASE_URL}/font-size.json`,
+  borderRadius: `${SCHEMA_BASE_URL}/dimension.json`, // Radius uses dimension schema
   alias: `${SCHEMA_BASE_URL}/alias.json`,
   multiplier: `${SCHEMA_BASE_URL}/multiplier.json`,
   colorSet: `${SCHEMA_BASE_URL}/color-set.json`,

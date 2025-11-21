@@ -321,7 +321,19 @@ export class TokenConverter {
     // Apply naming convention
     switch (this.options.settings.namingConvention) {
       case "kebab-case":
-        sanitized = sanitized.toLowerCase().replace(/\s+/g, "-");
+        // First, insert hyphens before uppercase letters (handle camelCase/PascalCase)
+        // e.g., "BorderColor" -> "Border-Color", "borderRadius" -> "border-Radius"
+        sanitized = sanitized.replace(/([a-z])([A-Z])/g, "$1-$2");
+        // Also handle consecutive uppercase followed by lowercase (e.g., "HTMLParser" -> "HTML-Parser")
+        sanitized = sanitized.replace(/([A-Z]+)([A-Z][a-z])/g, "$1-$2");
+        // Convert to lowercase
+        sanitized = sanitized.toLowerCase();
+        // Replace spaces and underscores with hyphens
+        sanitized = sanitized.replace(/[\s_]+/g, "-");
+        // Normalize multiple hyphens to single hyphen
+        sanitized = sanitized.replace(/-+/g, "-");
+        // Remove leading/trailing hyphens
+        sanitized = sanitized.replace(/^-|-$/g, "");
         break;
       case "camelCase":
         sanitized = sanitized.replace(/[-_\s]+(.)/g, (_, char) =>
@@ -329,7 +341,17 @@ export class TokenConverter {
         );
         break;
       case "snake_case":
-        sanitized = sanitized.toLowerCase().replace(/[-\s]+/g, "_");
+        // First, insert underscores before uppercase letters (handle camelCase/PascalCase)
+        sanitized = sanitized.replace(/([a-z])([A-Z])/g, "$1_$2");
+        sanitized = sanitized.replace(/([A-Z]+)([A-Z][a-z])/g, "$1_$2");
+        // Convert to lowercase
+        sanitized = sanitized.toLowerCase();
+        // Replace spaces and hyphens with underscores
+        sanitized = sanitized.replace(/[-\s]+/g, "_");
+        // Normalize multiple underscores to single underscore
+        sanitized = sanitized.replace(/_+/g, "_");
+        // Remove leading/trailing underscores
+        sanitized = sanitized.replace(/^_|_$/g, "");
         break;
     }
 

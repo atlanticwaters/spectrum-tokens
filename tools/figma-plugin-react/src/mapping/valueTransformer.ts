@@ -191,6 +191,27 @@ export function transformBoolean(value: boolean): number {
 }
 
 /**
+ * Normalize a token name to kebab-case
+ * Handles camelCase, PascalCase, spaces, and underscores
+ */
+function normalizeToKebabCase(name: string): string {
+  let normalized = name;
+  // Insert hyphens before uppercase letters (handle camelCase/PascalCase)
+  normalized = normalized.replace(/([a-z])([A-Z])/g, "$1-$2");
+  // Handle consecutive uppercase followed by lowercase (e.g., "HTMLParser" -> "HTML-Parser")
+  normalized = normalized.replace(/([A-Z]+)([A-Z][a-z])/g, "$1-$2");
+  // Convert to lowercase
+  normalized = normalized.toLowerCase();
+  // Replace spaces and underscores with hyphens
+  normalized = normalized.replace(/[\s_]+/g, "-");
+  // Normalize multiple hyphens to single hyphen
+  normalized = normalized.replace(/-+/g, "-");
+  // Remove leading/trailing hyphens
+  normalized = normalized.replace(/^-|-$/g, "");
+  return normalized;
+}
+
+/**
  * Transform variable alias to token reference
  * @param alias - Figma variable alias
  * @param variableMap - Map of Figma variable IDs to names
@@ -205,9 +226,12 @@ export function transformAlias(
     throw new Error(`Alias target not found: ${alias.id}`);
   }
 
-  // Convert Figma variable name to token path
-  // "colors/primary/blue" → "{colors.primary.blue}"
-  const tokenPath = variableName.replace(/\//g, ".");
+  // Convert Figma variable name to token path with normalized naming
+  // "colors/BorderColor/blue" → "{colors.border-color.blue}"
+  const tokenPath = variableName
+    .split("/")
+    .map(normalizeToKebabCase)
+    .join(".");
 
   return `{${tokenPath}}`;
 }
@@ -227,8 +251,12 @@ export function transformAliasToSpectrum(
     throw new Error(`Alias target not found: ${alias.id}`);
   }
 
-  // Convert to flattened format: "colors/primary/blue" → "{colors-primary-blue}"
-  const tokenName = variableName.replace(/\//g, "-");
+  // Convert to flattened format with normalized naming
+  // "colors/BorderColor/blue" → "{colors-border-color-blue}"
+  const tokenName = variableName
+    .split("/")
+    .map(normalizeToKebabCase)
+    .join("-");
 
   return `{${tokenName}}`;
 }
